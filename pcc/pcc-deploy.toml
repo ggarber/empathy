@@ -1,0 +1,8 @@
+agent_name = "empathy-pcc"
+image = "ggarber10/empathy-pcc:0.6"
+secret_set = "gustavo-demo-secrets"
+enable_krisp = false
+
+[scaling]
+  max_agents = 10
+  min_agents = 0

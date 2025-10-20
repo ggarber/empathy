@@ -1,0 +1,2 @@
+pipecatcloud>=0.2.4
+pipecat-ai[openai,daily,deepgram,cartesia,silero,runner,webrtc,local-smart-turn-v3,google]>=0.0.85

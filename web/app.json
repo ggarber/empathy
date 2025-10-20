@@ -1,0 +1,55 @@
+{
+  "name": "pipecat-demo-agent-client",
+  "description": "A Next.js TypeScript project demonstrating integration with Pipecat AI voice UI components",
+  "repository": "https://github.com/your-username/pipecat-demo-agent-client",
+  "logo": "https://cdn.jsdelivr.net/npm/heroku-logo@1.0.1/heroku-logo.svg",
+  "keywords": ["nextjs", "typescript", "pipecat", "voice-ui", "ai"],
+  "image": "heroku/nodejs",
+  "stack": "heroku-22",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "addons": [],
+  "env": {
+    "NODE_ENV": {
+      "description": "Environment (production, development, test)",
+      "value": "production"
+    },
+    "PIPECAT_API_KEY": {
+      "description": "API key for Pipecat services",
+      "required": false
+    },
+    "DAILY_API_KEY": {
+      "description": "API key for Daily.co transport",
+      "required": false
+    }
+  },
+  "environments": {
+    "test": {
+      "addons": [],
+      "env": {
+        "NODE_ENV": "test"
+      },
+      "formation": {
+        "web": {
+          "quantity": 1,
+          "size": "basic"
+        }
+      },
+      "scripts": {
+        "test": "npm test"
+      }
+    }
+  },
+  "scripts": {
+    "postdeploy": "echo 'Deployment completed successfully'"
+  }
+}
